@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <string.h>
+#include <locale.h>
 
 using namespace std;
 
@@ -77,7 +78,6 @@ void busca(t_vacina pesquisar[], char pescpf[]) {
 
   cout << "Digite o CPF que deseja encontrar: " << endl;
   cin >> pescpf;
-  system("cls || clear");
 
   for (int i = 0; i < qtd; i++) {
 
@@ -104,6 +104,7 @@ void busca(t_vacina pesquisar[], char pescpf[]) {
 }
 
 int main() {
+  setlocale(LC_ALL, "Portuguese");
   t_vacina quantidade[100];
   char buscaCpf[14];
   char op;
